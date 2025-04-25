@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wireframe - EnduranceExtrême</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700;900&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background-color: #f4f4f4;
+      color: #5c5b59;
+    }
+    header {
+      background-color: #986748;
+      color: white;
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    header img {
+      height: 60px;
+    }
+    .menu-toggle {
+      display: none;
+      background-color: #fca260;
+      color: white;
+      border: none;
+      padding: 10px;
+      font-size: 18px;
+    }
+    nav {
+      background-color: #fca260;
+      padding: 10px;
+      text-align: center;
+    }
+    nav a {
+      margin: 0 10px;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .hero {
+      background-color: #ccc;
+      height: 300px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 24px;
+      color: #5c5b59;
+      text-align: center;
+      flex-direction: column;
+    }
+    .content-section {
+      padding: 40px 20px;
+      border-bottom: 1px solid #ddd;
+    }
+    .content-section h2 {
+      color: #986748;
+    }
+    .graphic-placeholder {
+      width: 100%;
+      height: 200px;
+      background-color: #e0e0e0;
+      margin-bottom: 20px;
+    }
+    .text-placeholder {
+      background-color: #d9d9d9;
+      height: 20px;
+      margin: 10px 0;
+    }
+    .cta-button {
+      display: inline-block;
+      background-color: #fca260;
+      color: white;
+      padding: 10px 20px;
+      margin-top: 20px;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 5px;
+    }
+    .testimonial-slider {
+      display: flex;
+      overflow-x: auto;
+      gap: 20px;
+    }
+    .testimonial {
+      min-width: 250px;
+      background-color: #fff;
+      padding: 15px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    form label {
+      display: block;
+      margin-top: 10px;
+    }
+    form input, form select {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+    }
+    footer {
+      background-color: #5c5b59;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+    @media (max-width: 600px) {
+      nav {
+        display: none;
+        flex-direction: column;
+      }
+      nav.active {
+        display: flex;
+      }
+      .menu-toggle {
+        display: block;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="logo-endurance-extreme.jpg" alt="Logo Endurance Extrême">
+    <button class="menu-toggle" onclick="document.querySelector('nav').classList.toggle('active')">☰ Menu</button>
+  </header>
+
+  <nav>
+    <a href="#">Accueil</a>
+    <a href="#">Produit</a>
+    <a href="#">Témoignages</a>
+    <a href="#">Contact</a>
+  </nav>
+
+  <div class="hero">
+    Zone Vidéo ou Image Drone Immersive (Hero Section)
+    <a href="#" class="cta-button">Découvrir le produit</a>
+  </div>
+
+  <section class="content-section">
+    <h2>Présentation du produit</h2>
+    <div class="graphic-placeholder"></div>
+    <div class="text-placeholder"></div>
+    <div class="text-placeholder"></div>
+    <a href="#" class="cta-button">Acheter maintenant</a>
+  </section>
+
+  <section class="content-section">
+    <h2>Témoignages riders</h2>
+    <div class="testimonial-slider">
+      <div class="testimonial">"Super expérience, matériel au top !" - Hugo</div>
+      <div class="testimonial">"J’ai adoré la descente, je me suis sentie en sécurité." - Zoé</div>
+      <div class="testimonial">"Parfait pour progresser en VTT." - Thomas</div>
+    </div>
+  </section>
+
+  <section class="content-section">
+    <h2>Valeurs de la marque</h2>
+    <div class="graphic-placeholder"></div>
+    <div class="text-placeholder"></div>
+    <a href="#" class="cta-button">Nos engagements</a>
+  </section>
+
+  <section class="content-section">
+    <h2>Formulaire interactif : "Quel rider êtes-vous ?"</h2>
+    <form>
+      <label for="age">Tranche d'âge :</label>
+      <select id="age">
+        <option>Enfant</option>
+        <option>Adolescent</option>
+        <option>Adulte</option>
+      </select>
+      <label for="level">Niveau :</label>
+      <select id="level">
+        <option>Débutant</option>
+        <option>Intermédiaire</option>
+        <option>Confirmé</option>
+      </select>
+      <label for="objectif">Ton objectif :</label>
+      <input type="text" id="objectif" placeholder="Découvrir, progresser, performer...">
+      <a href="#" class="cta-button">Voir les recommandations</a>
+    </form>
+  </section>
+
+  <footer>
+    <p>© 2025 EnduranceExtrême – Tous droits réservés</p>
+  </footer>
+</body>
+</html>
